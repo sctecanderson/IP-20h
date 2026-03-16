@@ -7,16 +7,14 @@ const textoDinamico = document.querySelector('#texto-dinamico p');
 const thumbnails = document.querySelectorAll('.thumb');
 
 // 3. Função Única de Troca Sincronizada com Animação
-// Atualize seu bloco de clique das miniaturas no Script.js:
-
 thumbnails.forEach(thumb => {
     thumb.addEventListener('click', () => {
+
         // 1. Reset da animação
         imagemPrincipal.classList.remove('animar-entrada');
         void imagemPrincipal.offsetWidth; 
 
-        // 2. LÓGICA DE TROCA INTELIGENTE
-        // Verifica se a largura da tela é de celular (menor que 768px)
+        // 2. LÓGICA DE TROCA INTELIGENTE       
         const isMobile = window.innerWidth <= 768;
         
         // Se for mobile, pega o caminho que está no data-mobile. 
@@ -38,24 +36,22 @@ const btnHome = document.getElementById('btn-home');
 
 btnHome.addEventListener('click', (e) => {
     e.preventDefault(); // Impede que a página recarregue ou pule
+    
 
     // 1. Reset da animação (para o banner de boas-vindas também entrar bonito)
     imagemPrincipal.classList.remove('animar-entrada');
     void imagemPrincipal.offsetWidth; 
 
     // 2. Define os dados de Boas-vindas
-    imagemPrincipal.src = "imgs/bem-vindo.jpg"; // Certifique-se que o nome da imagem está correto
+    imagemPrincipal.src = "imgs/bem-vindo.jpg"; 
     tituloDinamico.innerText = "Bem-vindo ao meu Portfólio";
     textoDinamico.innerText = "Para o desenvolvimento deste projeto, utilizei uma metodologia de pesquisa ativa, recorrendo a documentações técnicas e ao auxílio de Inteligência Artificial como ferramenta de suporte e tutoria. Essa colaboração foi fundamental para a implementação de boas práticas de código, acessibilidade e interatividade, permitindo que eu focasse na lógica do Dashboard e na experiência do usuário. Explore os cards ao lado para conhecer minha trajetória, meus projetos e minhas competências técnicas no mundo do desenvolvimento.";
 
     // 3. Aplica a animação de entrada
     imagemPrincipal.classList.add('animar-entrada');
-
-    // 4. (Opcional) Volta para o topo se o usuário estiver lá embaixo
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// 4. Menu Superior (Sincronizado com as miniaturas)
+// 4. Menu Superior 
 const menuLinks = document.querySelectorAll('#menu a');
 menuLinks.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -68,6 +64,7 @@ menuLinks.forEach(link => {
     });
 });
 
+// Lógica de acessibilidade implementada com auxílio de IA para otimização de UX.
 // 5. Acessibilidade: Fonte A+ A-
 const btnAumentar = document.getElementById('aumentar');
 const btnDiminuir = document.getElementById('diminuir');

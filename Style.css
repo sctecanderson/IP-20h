@@ -84,7 +84,9 @@ body {
     filter: grayscale(100%) brightness(200%);
 }
 
-/* --- ACESSIBILIDADE --- */
+/*   ==============================================================================
+     LÓGICA DE ACESSIBILIDADE IMPLEMENTADA COM AUXÍLIO DE IA PARA OTIMIZAÇÃO DE UX
+     ==============================================================================   */
 .acessibilidade {
     display: flex;
     gap: 10px;
@@ -236,7 +238,7 @@ a#bt-rede-social {
     }
 
     #menu {
-        flex-wrap: wrap;       /* Faz os botões pularem linha */
+        flex-wrap: wrap; 
         justify-content: center;
         gap: 8px;
         width: 100%;
@@ -245,13 +247,13 @@ a#bt-rede-social {
     #menu a {
         padding: 8px 12px;
         font-size: 13px;
-        flex: 1 1 auto;        /* Faz os botões preencherem a largura proporcionalmente */
+        flex: 1 1 auto;        
         text-align: center;
-        min-width: 120px;      /* Tamanho mínimo para não ficar espremido */
+        min-width: 120px;     
     }
 
     #btn-home {
-        order: -1;             /* Garante que a casinha seja a primeira */
+        order: -1;          
         width: auto;
     }
 
@@ -270,7 +272,7 @@ a#bt-rede-social {
 
     .sidebar-projetos {
         flex-direction: row;
-        overflow-x: auto;      /* Scroll lateral para as miniaturas */
+        overflow-x: auto;     
         padding: 10px 0;
         white-space: nowrap;
     }
@@ -278,7 +280,7 @@ a#bt-rede-social {
     .thumb {
         min-width: 150px;
         max-width: 150px;
-        transform: none !important; /* Remove o efeito de mover pro lado no touch */
+        transform: none !important; 
     }
 
     .tutores-container {
@@ -291,7 +293,7 @@ a#bt-rede-social {
     }
 }
 
-/* --- ALTO CONTRASTE (Sempre por último) --- */
+/* --- ALTO CONTRASTE --- */
 .alto-contraste, .alto-contraste body { background: black !important; color: white !important; }
 .alto-contraste #destaque, .alto-contraste #texto-dinamico, .alto-contraste #agradecimento, .alto-contraste .tutor-card {
     background: #111 !important;
