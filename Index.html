@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="imgs/favicon-casa.png" type="image/x-icon">
+    <link rel="stylesheet" href="Style.css">
+    <title>Introdução à Programação Front-End e Back-End (IP 20h A)</title>
+</head>
+
+<body>
+    <header>
+        <div id="bg-container">
+            <img src="imgs/bg-d.png" alt="img de fundo">
+        </div>
+
+        <div class="header-content">
+            <nav id="menu">
+                <a href="index.html" id="btn-home" title="Ir para o Início">
+                    <span class="icone-casa">🏠</span>
+                </a>
+                <a href="#sobre" data-alvo="sobre">Sobre mim</a>
+                <a href="#projetos" data-alvo="projetos">Meus Projetos</a>
+                <a href="#habilidades" data-alvo="habilidades">Minhas Skills</a>
+                <a href="#formacao" data-alvo="formacao">Formação Acadêmica</a>
+            </nav>
+
+            <div class="acessibilidade">
+                <button id="contraste">🌙 Acessibilidade</button>
+                <button id="aumentar">A+</button>
+                <button id="diminuir">A-</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-principal">
+        <section id="destaque">
+            <div class="banner-ativo">
+                <img src="imgs/bem-vindo.jpg" id="imagem-principal">
+                <div id="texto-dinamico">
+                    <h2>Bem-vindo ao meu Portfólio</h2>
+                    <p>Para o desenvolvimento deste projeto, utilizei uma metodologia de pesquisa ativa, recorrendo
+                        a documentações técnicas e ao auxílio de Inteligência Artificial como ferramenta de suporte e
+                        tutoria. Essa colaboração foi fundamental para a implementação de boas práticas de código,
+                        acessibilidade e interatividade, permitindo que eu focasse na lógica do Dashboard e na
+                        experiência do usuário.
+                        Explore os cards ao lado para conhecer minha trajetória, meus
+                        projetos e minhas competências técnicas no mundo do desenvolvimento.</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar-projetos">
+            <img src="imgs/banner-sobre-d.jpg" class="thumb" id="thumb-sobre" data-titulo="Anderson Alves"
+                data-mobile="imgs/banner-sobre-m.jpg"
+                data-texto=" 
+               Carioca de nascimento e brusquense de coração, aos 37 anos tomei a decisão de mudar para Santa Catarina em busca de qualidade de vida para minha esposa Thainara e meus três filhos. Minha trajetória profissional sempre orbitou o mundo digital: fui Gerente de E-commerce por mais de 4 anos, onde fui responsável pela criação e identidade visual de lojas em Magento, além de atuar como Designer Gráfico.
+               Embora a paixão pela programação seja um sonho antigo, foi através do programa SCTEC que decidi mergulhar de cabeça nessa transição de carreira. Hoje, concilio meu trabalho como freelancer em comunicação visual e motorista de aplicativo com os estudos intensivos em desenvolvimento de software.
+               Sou um profissional movido pela resiliência e pelo desejo de criar soluções que impactem a sociedade. Atualmente, dedico minha energia ao desenvolvimento do URBIX, um aplicativo mobile focado na segurança urbana e monitoramento de desastres naturais. Minha meta é clara: unir minha maturidade profissional e visão de design ao domínio técnico do código para construir um futuro mais seguro e conectado.">
+
+            <img src="imgs/banner-projetos-d.jpg" class="thumb" id="thumb-projetos" data-titulo="Meus Projetos"
+                data-mobile="imgs/banner-projetos-m.jpg"
+                data-texto="
+                Nesta seção, apresento a evolução do meu pensamento técnico e criativo. Meu trabalho foca na união entre funcionalidade robusta e interfaces intuitivas, sempre priorizando a experiência do usuário final.
+                Destaque: Projeto URBIX
+                O URBIX é mais que um aplicativo; é uma plataforma de inteligência urbana colaborativa. Desenvolvido com foco mobile, o projeto atua como uma rede social estratégica para o monitoramento de infrações de trânsito e alertas em tempo real sobre catástrofes naturais. O objetivo é empoderar o cidadão, transformando cada usuário em um agente ativo na segurança e organização da cidade, facilitando a resposta rápida a incidentes e contribuindo para a preservação de vidas em situações de risco.
+
+                Desenvolvimento Web: Landing Page IP 20h
+                Este portfólio é o resultado prático do meu domínio em HTML5 semântico, arquitetura CSS3 moderna e JavaScript puro (Vanilla JS). Implementei conceitos avançados de manipulação de DOM e responsividade, garantindo que a aplicação se comporte como um Dashboard fluido em qualquer dispositivo.">
+
+                <img src="imgs/banner-habilidades-d.jpg" class="thumb" id="thumb-habilidades" data-titulo="Habilidades"
+                data-mobile="imgs/banner-habilidades-m.jpg"
+                data-texto="
+                Minha atuação profissional é pautada pelo equilíbrio entre a precisão técnica e o olhar estético. Como desenvolvedor em constante evolução, utilizo minha base sólida em design gráfico para criar interfaces que não apenas funcionam, mas encantam e facilitam a jornada do usuário.
+                Hard Skills (Competências Técnicas):
+                Desenvolvimento Front-End: Proficiência em HTML5 Semântico e CSS3 Moderno, com foco em layouts responsivos e Mobile-First. Experiência em JavaScript (Vanilla JS) para criação de interatividade dinâmica e manipulação eficiente de DOM.
+                Ecossistema Web: Conhecimento prático em arquitetura de sistemas e plataformas de E-commerce (Magento), compreendendo todo o ciclo de criação de lojas virtuais e identidades visuais corporativas.
+                UI/UX Design: Aplicação de princípios de Web Design Avançado, tipografia e teoria das cores para garantir interfaces intuitivas e acessíveis (WCAG).
+                Soft Skills (Competências Comportamentais):
+                Resiliência e Adaptabilidade: Capacidade comprovada de transição de carreira e aprendizado contínuo, adaptando-me a novos desafios e tecnologias com agilidade.
+                Visão Estratégica: Expertise em gestão, lapidada por anos liderando operações de e-commerce, o que me permite entender as necessidades de negócio por trás de cada linha de código.
+               Resolução de Problemas: Foco na construção de soluções lógicas e eficientes, como demonstrado no projeto URBIX, onde a tecnologia serve ao propósito de segurança e organização social.">
+
+            <img src="imgs/banner-formacao-d.jpg" class="thumb" id="thumb-formacao" data-titulo="Formação Acadêmica"
+                data-mobile="imgs/banner-formacao-m.jpg"
+                data-texto="
+                 Minha trajetória educacional é desenhada para unir o rigor acadêmico à agilidade das tecnologias de mercado. Acredito que a base teórica sólida, aliada à prática constante, é o único caminho para a excelência na programação.
+Graduação em Análise e Desenvolvimento de Sistemas (ADS) – ETEP Atualmente curso ADS, onde aprofundo meus conhecimentos em lógica avançada, arquitetura de sistemas e metodologias ágeis. O foco acadêmico me permite compreender o porquê por trás das tecnologias, desenvolvendo uma visão crítica sobre escalabilidade e performance de software.
+Especialização SCTEC – Carreira Tech Através do programa SCTEC, consolido minhas habilidades práticas na trilha de Desenvolvimento de Software. É onde transformo teoria em código real, dominando o ecossistema Front-End e Back-End, além de explorar a implementação de Inteligência Artificial na prática para otimização de processos.
+Aprendizado Contínuo e Udemy Complemento minha formação com cursos intensivos e certificações em plataformas como Udemy, focando em ferramentas específicas e bibliotecas modernas. Para mim, o aprendizado é um ciclo contínuo; mantenho-me em constante atualização com as melhores práticas de mercado para entregar soluções que estejam sempre no próximo nível.">
+        </aside>
+    </main>
+
+    <section id="agradecimento">
+        <div class="content-agradece">
+            <h2>Agradecimento Especial</h2>
+            <p>Gostaria de expressar minha profunda gratidão aos tutores que foram fundamentais nesta jornada de
+                aprendizado no SCTEC. <br>
+                Obrigado por compartilharem seu conhecimento e por incentivarem o desenvolvimento tecnológico em
+                Brusque!</p>
+
+            <div class="tutores-container">
+                <div class="tutor-card">
+                    <img src="imgs/p-Jaime.jpg" alt="Tutor Jaime Maretoli" class="foto-tutor-retangular">
+                    <h3>Jaime Maretoli</h3>
+                    <p class="role">Professor das aulas de acompanhamento HTML</p>
+                </div>
+
+                <div class="tutor-card">
+                    <img src="imgs/p-andre.jpg" alt="Tutor André Coelho" class="foto-tutor-retangular">
+                    <h3>André Coelho</h3>
+                    <p class="role">Engenheiro de Software / Especialista em Front-End aula de CSS e JS</p>
+                </div>
+
+                <div class="tutor-card">
+                    <img src="imgs/p-otto.jpg" alt="Tutor Otto Hannemann" class="foto-tutor-retangular">
+                    <h3>Otto Hannemann</h3>
+                    <p class="role">Professor / Especialista em Back-End, aulas de banco de dados</p>
+                </div>
+            </div>
+
+            <h2 class="mensagem-final">"Rumo ao Próximo Nível!" 🚀</h2>
+        </div>
+    </section>
+
+    <footer>
+        Copyright &copy;2026 - Todos os direitos reservados -
+        Criado e desenvolvido por:<a id="bt-rede-social" href="https://github.com/sctecanderson" target="_blank">
+            Anderson Alves </a>
+
+    </footer>
+    <script src="Script.js"></script>
+</body>
+
+</html>

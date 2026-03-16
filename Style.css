@@ -1,0 +1,301 @@
+/* --- RESET E BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ced4da 100%);
+    color: #333;   
+    min-height: 100vh;
+}
+
+/* --- BACKGROUND FIXO --- */
+#bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+/* --- HEADER E MENU --- */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#menu a {
+    background-color: #71b33c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+#menu a:hover {
+    background-color: #20380c;
+    transform: scale(1.05);
+}
+
+/* Botão Home Especial */
+#btn-home {
+    background-color: #71b33c;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#btn-home:hover {
+    background-color: #20380c;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(32, 56, 12, 0.4);
+}
+
+.icone-casa {
+    font-size: 1.2rem;
+    filter: grayscale(100%) brightness(200%);
+}
+
+/* --- ACESSIBILIDADE --- */
+.acessibilidade {
+    display: flex;
+    gap: 10px;
+}
+
+.acessibilidade button {
+    background-color: #71b33c;
+    border: 1px solid #71b33c;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- DASHBOARD PRINCIPAL --- */
+.container-principal {
+    display: flex;
+    max-width: 1400px;
+    margin: 15px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+#destaque {
+    flex: 3;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#imagem-principal {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#texto-dinamico {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    min-height: 150px;
+}
+
+/* --- SIDEBAR --- */
+.sidebar-projetos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumb {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.thumb:hover {
+    transform: translateX(-10px);
+    box-shadow: 0 4px 15px rgba(113, 179, 60, 0.4);
+}
+
+/* --- SEÇÃO DE AGRADECIMENTO E TUTORES --- */
+#agradecimento {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border-top: 8px solid #71b33c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.tutores-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.tutor-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.tutor-card:hover { 
+    transform: translateY(-5px); 
+    border-color: #71b33c;
+}
+
+.foto-tutor-retangular {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.role { 
+    color: #71b33c; 
+    font-weight: bold; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+}
+
+/* --- FOOTER --- */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 20px;
+    color: #71b33c;
+    font-weight: bold;
+}
+
+a#bt-rede-social {
+    color: #fff;
+    margin-left: 5px;
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes esmaecer { from { opacity: 0; } to { opacity: 1; } }
+@keyframes entrarEExpandir {
+    0% { opacity: 0; transform: translateX(50px) scale(0.9); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+.fade-texto { animation: esmaecer 0.5s ease-in-out; }
+.animar-entrada { animation: entrarEExpandir 0.6s ease-out; }
+
+
+/* ==========================================================
+   RESPONSIVIDADE (MOBILE) - TUDO O QUE MUDA NO CELULAR
+   ========================================================== */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    #menu {
+        flex-wrap: wrap;       /* Faz os botões pularem linha */
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    #menu a {
+        padding: 8px 12px;
+        font-size: 13px;
+        flex: 1 1 auto;        /* Faz os botões preencherem a largura proporcionalmente */
+        text-align: center;
+        min-width: 120px;      /* Tamanho mínimo para não ficar espremido */
+    }
+
+    #btn-home {
+        order: -1;             /* Garante que a casinha seja a primeira */
+        width: auto;
+    }
+
+    .acessibilidade {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container-principal {
+        flex-direction: column;
+    }
+
+    #destaque {
+        width: 100%;
+    }
+
+    .sidebar-projetos {
+        flex-direction: row;
+        overflow-x: auto;      /* Scroll lateral para as miniaturas */
+        padding: 10px 0;
+        white-space: nowrap;
+    }
+
+    .thumb {
+        min-width: 150px;
+        max-width: 150px;
+        transform: none !important; /* Remove o efeito de mover pro lado no touch */
+    }
+
+    .tutores-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tutor-card {
+        width: 90%;
+    }
+}
+
+/* --- ALTO CONTRASTE (Sempre por último) --- */
+.alto-contraste, .alto-contraste body { background: black !important; color: white !important; }
+.alto-contraste #destaque, .alto-contraste #texto-dinamico, .alto-contraste #agradecimento, .alto-contraste .tutor-card {
+    background: #111 !important;
+    border: 1px solid yellow !important;
+    color: white !important;
+}
+.alto-contraste h1, .alto-contraste h2, .alto-contraste .role { color: yellow !important; }
