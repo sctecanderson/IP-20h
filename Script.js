@@ -4,11 +4,11 @@ const tituloDinamico = document.querySelector('#texto-dinamico h2');
 const textoDinamico = document.querySelector('#texto-dinamico p');
 
 // 2. Miniaturas
-const thumbnails = document.querySelectorAll('.thumb');
+const thumbnails = document.querySelectorAll('.visual');
 
 // 3. Função Única de Troca Sincronizada com Animação
-thumbnails.forEach(thumb => {
-    thumb.addEventListener('click', () => {
+thumbnails.forEach(visual => {
+    visual.addEventListener('click', () => {
 
         // 1. Reset da animação
         imagemPrincipal.classList.remove('animar-entrada');
@@ -19,15 +19,31 @@ thumbnails.forEach(thumb => {
         
         // Se for mobile, pega o caminho que está no data-mobile. 
         // Se for desktop, pega o src normal da miniatura.
-        const novoSrc = isMobile ? thumb.getAttribute('data-mobile') : thumb.src;
+        const novoSrc = isMobile ? visual.getAttribute('data-mobile') : visual.src;
 
         // 3. Aplica as mudanças
         imagemPrincipal.src = novoSrc;
-        tituloDinamico.innerText = thumb.getAttribute('data-titulo');
-        textoDinamico.innerText = thumb.getAttribute('data-texto');
+        tituloDinamico.innerText = visual.getAttribute('data-titulo');
+        textoDinamico.innerText = visual.getAttribute('data-texto');
 
         // 4. Dispara Animação
         imagemPrincipal.classList.add('animar-entrada');
+    });
+});
+
+// 1. Criar o objeto de áudio (Pode ser um link de um som curto)
+const somHover = new Audio('imgs/hover.mp3');
+somHover.volume = 0.12; // Volume baixinho para não assustar o usuário
+
+// 2. Selecionar todos os elementos que terão som (Miniaturas e Botões do Menu)
+const elementosComSom = document.querySelectorAll('.thumb, #menu a, #btn-home, .acessibilidade button, #visual-sobre, #visual-projetos, #visual-habilidades, #visual-formacao, #J, #A, #O');
+
+// 3. Adicionar o evento em cada um deles
+elementosComSom.forEach(elemento => {
+    elemento.addEventListener('mouseenter', () => {
+        // Reinicia o som para que ele toque de novo se o usuário passar o mouse rápido
+        somHover.currentTime = 0; 
+        somHover.play();
     });
 });
 
@@ -57,7 +73,7 @@ menuLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault(); 
         const alvo = link.getAttribute('data-alvo');
-        const miniaturaCorrespondente = document.getElementById(`thumb-${alvo}`);
+        const miniaturaCorrespondente = document.getElementById(`visual-${alvo}`);
         if (miniaturaCorrespondente) {
             miniaturaCorrespondente.click();
         }

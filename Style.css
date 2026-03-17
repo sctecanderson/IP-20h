@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ced4da 100%);
+    background: linear-gradient(135deg, #eeeeff 0%, #ced4da 100%);
     color: #333;   
     min-height: 100vh;
 }
@@ -131,6 +131,15 @@ body {
     min-height: 150px;
 }
 
+#visual-h2{
+    padding: 5px;
+    background-color: #71b33c;
+    color: white;
+    border-radius: 0.3pc;    
+    border-top: 4px solid rgba(32, 56, 12, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
 /* --- SIDEBAR --- */
 .sidebar-projetos {
     flex: 1;
@@ -139,7 +148,7 @@ body {
     gap: 10px;
 }
 
-.thumb {
+.visual {
     width: 100%;
     border-radius: 12px;
     cursor: pointer;
@@ -147,7 +156,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.thumb:hover {
+.visual:hover {
     transform: translateX(-10px);
     box-shadow: 0 4px 15px rgba(113, 179, 60, 0.4);
 }
@@ -204,6 +213,7 @@ body {
 
 /* --- FOOTER --- */
 footer {
+    position: sticky;
     display: flex;
     justify-content: center;
     background-color: #333;
@@ -277,7 +287,7 @@ a#bt-rede-social {
         white-space: nowrap;
     }
 
-    .thumb {
+    .visual {
         min-width: 150px;
         max-width: 150px;
         transform: none !important; 
